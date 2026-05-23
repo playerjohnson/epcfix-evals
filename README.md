@@ -45,6 +45,33 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
+## Auto-sweep on push (GitHub Action)
+
+`.github/workflows/sweep.yml` runs a fresh judge sweep on every push that
+touches `variants.js`, `personas.js`, or anything under `scripts/`, then
+commits the heatmap + report back into `runs/<timestamp>/` and
+`runs/latest/` on the same branch. The site's "Latest committed scorecard"
+section reads from `runs/latest/heatmap.svg`, so the live URL always
+reflects the current variants.
+
+One-off setup: add a `GEMINI_API_KEY` repo secret
+(**Settings → Secrets and variables → Actions → New repository secret**).
+Until that secret exists the workflow exits cleanly without spending any
+API calls — safe to merge ahead of time.
+
+To re-run the sweep without changing copy, fire it manually:
+**Actions → Auto-sweep → Run workflow**.
+
+### Running the sweep locally
+
+```bash
+export GEMINI_API_KEY=AIza…
+node scripts/run-sweep.mjs --concurrency 4
+node scripts/render-heatmap.mjs
+```
+
+Outputs land under `runs/<ISO-timestamp>/` and `runs/latest/`.
+
 ## Editing personas & variants
 
 `personas.js` and `variants.js` are plain ES modules. Add an entry to the

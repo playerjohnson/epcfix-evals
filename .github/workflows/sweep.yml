@@ -1,0 +1,80 @@
+name: Auto-sweep
+
+on:
+  push:
+    paths:
+      - "variants.js"
+      - "personas.js"
+      - "scripts/**"
+      - ".github/workflows/sweep.yml"
+  workflow_dispatch: {}
+
+# Path filter above already excludes runs/, so the commit-back step won't re-trigger.
+# Keep one run in flight per ref so rapid pushes don't pile up judge calls.
+concurrency:
+  group: sweep-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # We need a real ref (not detached HEAD) so we can push the
+          # generated runs/ back to the same branch.
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+
+      - name: Bail if no GEMINI_API_KEY secret
+        id: gate
+        env:
+          HAS_KEY: ${{ secrets.GEMINI_API_KEY != '' }}
+        run: |
+          if [ "$HAS_KEY" != "true" ]; then
+            echo "GEMINI_API_KEY repo secret not set — skipping sweep."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.skip != 'true'
+        with:
+          node-version: "20"
+
+      - name: Run sweep
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          node scripts/run-sweep.mjs --concurrency 4 --model gemini-2.5-flash --commit "${GITHUB_SHA:0:7}"
+
+      - name: Render heatmap SVG
+        if: steps.gate.outputs.skip != 'true'
+        run: node scripts/render-heatmap.mjs
+
+      - name: Commit & push results
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add runs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: auto-sweep for ${GITHUB_SHA:0:7}"
+          # Retry push up to 3 times in case of concurrent updates.
+          for i in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then exit 0; fi
+            git pull --rebase origin "$GITHUB_REF_NAME" || true
+            sleep $((i * 2))
+          done
+          echo "Failed to push after retries." >&2
+          exit 1
