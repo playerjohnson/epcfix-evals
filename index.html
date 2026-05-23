@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EPCFix Evals · landlord-persona scorecard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f1e7;
+      --bg-card: #fffdf8;
+      --ink: #0e1a2b;
+      --ink-soft: #4a5a6f;
+      --ink-mute: #8a8275;
+      --rule: #d9cfb8;
+      --accent: #1f5d40;
+      --accent-soft: #d8e6dd;
+      --warn: #a3411a;
+      --warn-soft: #f3dfd1;
+      --ok: #1f5d40;
+      --grade-bad: #b95742;
+      --grade-mid: #c8923a;
+      --grade-good: #1f5d40;
+      --shadow: 0 1px 0 rgba(14, 26, 43, 0.06), 0 8px 24px -12px rgba(14, 26, 43, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(31, 93, 64, 0.04), transparent 40%),
+        radial-gradient(circle at 92% 4%, rgba(163, 65, 26, 0.03), transparent 35%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .shell { max-width: 1180px; margin: 0 auto; padding: 56px 36px 96px; }
+
+    /* Masthead */
+    .masthead { display: grid; grid-template-columns: 1fr auto; align-items: end; border-bottom: 1px solid var(--ink); padding-bottom: 28px; gap: 24px; }
+    .brand { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 500;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 0.95;
+      margin: 0;
+      letter-spacing: -0.02em;
+      font-variation-settings: "opsz" 144;
+    }
+    h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
+    .lede { font-family: "Fraunces", serif; font-style: italic; font-size: 17px; color: var(--ink-soft); max-width: 38ch; text-align: right; line-height: 1.4; }
+
+    /* Meta row */
+    .meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); margin-top: 18px; border-bottom: 1px solid var(--rule); padding-bottom: 18px; }
+    .meta div span { display: block; color: var(--ink); font-size: 13px; letter-spacing: 0; text-transform: none; margin-top: 2px; font-family: "IBM Plex Sans", sans-serif; }
+
+    /* Section heads */
+    .section-head { display: flex; align-items: baseline; gap: 16px; margin: 56px 0 18px; }
+    .section-head h2 { font-family: "Fraunces", serif; font-weight: 500; font-size: 28px; margin: 0; letter-spacing: -0.01em; }
+    .section-head .num { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-mute); letter-spacing: 0.1em; }
+    .section-head .hint { font-family: "Fraunces", serif; font-style: italic; color: var(--ink-soft); font-size: 15px; }
+
+    /* Cards */
+    .card { background: var(--bg-card); border: 1px solid var(--rule); border-radius: 2px; padding: 22px 24px; box-shadow: var(--shadow); }
+
+    /* Settings */
+    .settings { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; align-items: end; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field-provider { grid-column: span 3; }
+    .field-key { grid-column: span 6; }
+    .field-conc { grid-column: span 1; }
+    .field-actions { grid-column: span 2; display: flex; gap: 8px; }
+    label { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); }
+    input, select {
+      font-family: "IBM Plex Mono", monospace; font-size: 13px;
+      padding: 9px 12px; border: 1px solid var(--rule); background: white; color: var(--ink); border-radius: 2px;
+      width: 100%;
+    }
+    input:focus, select:focus { outline: none; border-color: var(--accent); }
+    input[type="password"] { letter-spacing: 0.1em; }
+    .key-status { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-mute); margin-top: 6px; }
+    .key-status.saved { color: var(--accent); }
+
+    /* Buttons */
+    button {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 10px 16px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+      cursor: pointer; border-radius: 2px;
+      transition: background 0.15s ease;
+    }
+    button:hover:not(:disabled) { background: var(--accent); border-color: var(--accent); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    button.secondary { background: transparent; color: var(--ink); }
+    button.secondary:hover:not(:disabled) { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+    button.danger:hover:not(:disabled) { background: var(--warn); border-color: var(--warn); }
+
+    /* Run row */
+    .run-row { display: flex; gap: 10px; align-items: center; margin-top: 18px; flex-wrap: wrap; }
+    .progress {
+      font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft);
+      margin-left: auto;
+    }
+    .progress-bar { height: 2px; background: var(--rule); margin-top: 12px; overflow: hidden; }
+    .progress-bar > div { height: 100%; background: var(--accent); width: 0; transition: width 0.3s ease; }
+
+    /* Variant / persona lists */
+    .grid-2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; }
+    .list-item { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .list-item:last-child { border-bottom: 0; }
+    .list-item .name { font-weight: 500; font-size: 15px; }
+    .list-item .meta-line { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-mute); letter-spacing: 0.04em; margin-top: 3px; }
+    .copy-preview { font-family: "Fraunces", serif; font-size: 17px; line-height: 1.35; color: var(--ink); margin-top: 8px; font-variation-settings: "opsz" 24; }
+    .copy-sub { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+    .cta-pill { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--rule); margin-top: 8px; color: var(--ink-soft); }
+
+    /* Leaderboard */
+    .leaderboard { font-family: "IBM Plex Mono", monospace; }
+    .leaderboard-row { display: grid; grid-template-columns: 32px 1fr 60px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); gap: 16px; }
+    .leaderboard-row:last-child { border-bottom: 0; }
+    .leaderboard-row .rank { font-size: 11px; color: var(--ink-mute); letter-spacing: 0.1em; }
+    .leaderboard-row .name { font-family: "IBM Plex Sans", sans-serif; font-size: 14px; }
+    .leaderboard-row .score { font-size: 24px; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+    .score-bar { height: 1px; background: var(--rule); position: relative; margin-top: 4px; grid-column: 1 / -1; }
+    .score-bar > div { position: absolute; top: 0; left: 0; height: 100%; background: var(--accent); }
+
+    /* Heatmap */
+    .heatmap { width: 100%; border-collapse: collapse; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+    .heatmap th, .heatmap td { padding: 8px 10px; text-align: center; border-bottom: 1px solid var(--rule); }
+    .heatmap th { font-weight: 500; color: var(--ink-mute); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; text-align: left; }
+    .heatmap th.var { text-align: center; }
+    .heatmap td.label { text-align: left; font-family: "IBM Plex Sans", sans-serif; color: var(--ink-soft); }
+    .heatmap td.cell { font-variant-numeric: tabular-nums; font-weight: 500; color: white; min-width: 50px; }
+
+    /* Variant detail */
+    .detail { margin-top: 28px; }
+    .detail h3 { font-family: "Fraunces", serif; font-weight: 500; font-size: 22px; margin: 0 0 6px; letter-spacing: -0.01em; }
+    .detail .rationale { font-style: italic; color: var(--ink-soft); font-family: "Fraunces", serif; margin-bottom: 14px; }
+    .prog-line { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); margin: 12px 0; padding: 10px 14px; background: var(--bg); border-left: 2px solid var(--rule); }
+    .prog-line.warn { border-left-color: var(--warn); color: var(--warn); background: var(--warn-soft); }
+    .prog-line .ok { color: var(--accent); }
+    .prog-line .bad { color: var(--warn); font-weight: 500; }
+    .scoretable { width: 100%; border-collapse: collapse; font-family: "IBM Plex Mono", monospace; font-size: 12px; margin-top: 14px; }
+    .scoretable th, .scoretable td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .scoretable th { font-weight: 500; color: var(--ink-mute); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .scoretable td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .scoretable td.reason { font-family: "IBM Plex Sans", sans-serif; color: var(--ink-soft); font-size: 13px; line-height: 1.5; max-width: 360px; }
+
+    /* Banner / toast */
+    .banner { padding: 14px 18px; border-left: 3px solid var(--warn); background: var(--warn-soft); color: var(--ink); font-size: 14px; margin: 16px 0; }
+    .banner code { font-family: "IBM Plex Mono", monospace; font-size: 12px; background: rgba(14, 26, 43, 0.06); padding: 1px 5px; border-radius: 2px; }
+    .empty { font-family: "Fraunces", serif; font-style: italic; color: var(--ink-mute); padding: 32px 0; text-align: center; }
+
+    /* Footnote */
+    footer { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--rule); font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-mute); letter-spacing: 0.04em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
+    footer a:hover { color: var(--accent); border-color: var(--accent); }
+
+    @media (max-width: 760px) {
+      .shell { padding: 32px 20px 64px; }
+      .masthead { grid-template-columns: 1fr; }
+      .lede { text-align: left; }
+      .meta { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .settings { grid-template-columns: 1fr; }
+      .field-provider, .field-key, .field-conc, .field-actions { grid-column: span 1; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+
+    <header class="masthead">
+      <div>
+        <div class="brand">EPCFix · evals · v0.1</div>
+        <h1>How does this copy <em>actually</em> land?</h1>
+      </div>
+      <p class="lede">A landlord-persona scorecard for hero copy. Measured, not vibed — runs entirely in this browser.</p>
+    </header>
+
+    <div class="meta">
+      <div>Variants <span id="meta-variants">—</span></div>
+      <div>Personas <span id="meta-personas">—</span></div>
+      <div>Judge calls per run <span id="meta-calls">—</span></div>
+      <div>Last run <span id="meta-lastrun">never</span></div>
+    </div>
+
+    <!-- Settings -->
+    <div class="section-head">
+      <span class="num">01</span><h2>Settings</h2>
+      <span class="hint">key is stored locally in your browser. nothing leaves this page except the LLM call you trigger.</span>
+    </div>
+    <div class="card">
+      <div class="settings">
+        <div class="field field-provider">
+          <label for="provider">Judge provider</label>
+          <select id="provider">
+            <option value="programmatic">Programmatic only (free, no key)</option>
+            <option value="gemini">Google Gemini (BYOK, free tier)</option>
+          </select>
+        </div>
+        <div class="field field-key">
+          <label for="apikey">API key</label>
+          <input id="apikey" type="password" placeholder="AIza…" autocomplete="off" />
+          <div class="key-status" id="key-status">not saved</div>
+        </div>
+        <div class="field field-conc">
+          <label for="conc">Conc.</label>
+          <input id="conc" type="number" min="1" max="10" value="3" />
+        </div>
+        <div class="field field-actions">
+          <button class="secondary" id="save-key">Save</button>
+          <button class="secondary danger" id="clear-key">Clear</button>
+        </div>
+      </div>
+      <div id="provider-note"></div>
+      <div class="run-row">
+        <button id="run">▸ Run eval</button>
+        <button class="secondary" id="download" disabled>Download report.md</button>
+        <button class="secondary" id="reset" disabled>Reset results</button>
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </div>
+
+    <!-- Variants + personas -->
+    <div class="section-head">
+      <span class="num">02</span><h2>Variants &amp; personas</h2>
+      <span class="hint">edit <code style="font-family:'IBM Plex Mono'">variants.js</code> and <code style="font-family:'IBM Plex Mono'">personas.js</code> in the repo to add or change.</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div style="font-family:'IBM Plex Mono';font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px;">Variants</div>
+        <div id="variants-list"></div>
+      </div>
+      <div class="card">
+        <div style="font-family:'IBM Plex Mono';font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px;">Personas</div>
+        <div id="personas-list"></div>
+      </div>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="section-head">
+      <span class="num">03</span><h2>Leaderboard</h2>
+      <span class="hint">weighted score (0–100). judge dims + programmatic passes.</span>
+    </div>
+    <div class="card">
+      <div id="leaderboard" class="leaderboard">
+        <div class="empty">No results yet. Run an eval above.</div>
+      </div>
+    </div>
+
+    <!-- Heatmap -->
+    <div class="section-head">
+      <span class="num">04</span><h2>Persona × variant heatmap</h2>
+      <span class="hint">darker green = stronger fit for that persona.</span>
+    </div>
+    <div class="card">
+      <div id="heatmap-wrap">
+        <div class="empty">No results yet.</div>
+      </div>
+    </div>
+
+    <!-- Per-variant detail -->
+    <div class="section-head">
+      <span class="num">05</span><h2>Per-variant detail</h2>
+      <span class="hint">where each variant actually wins or dies, persona by persona.</span>
+    </div>
+    <div id="details"></div>
+
+    <footer>
+      <div>EPCFix Evals · static site, runs entirely in browser · MIT</div>
+      <div><a href="https://github.com/anthropics/cwc-workshops/tree/main/eval-driven-agent-development">pattern: cwc-workshops/eval-driven-agent-development</a></div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
