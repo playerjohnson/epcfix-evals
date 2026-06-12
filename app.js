@@ -186,11 +186,20 @@ async function mapLimit(items, limit, fn) {
   return results;
 }
 
+function syncKeyFromInput() {
+  state.apiKey = $("apikey").value.trim();
+  state.concurrency = Math.max(1, Math.min(10, Number($("conc").value) || 3));
+  localStorage.setItem("epcfix-key", state.apiKey);
+  localStorage.setItem("epcfix-conc", String(state.concurrency));
+  renderKeyStatus();
+}
+
 async function runEval() {
   if (state.running) return;
   state.running = true;
   setButtonsDisabled(true);
 
+  syncKeyFromInput();
   const judge = pickJudge();
   const progByVariant = new Map(variants.map(v => [v.id, gradeProgrammatic(v)]));
 
@@ -542,13 +551,7 @@ function init() {
     renderKeyStatus();
   });
 
-  $("save-key").addEventListener("click", () => {
-    state.apiKey = $("apikey").value.trim();
-    state.concurrency = Math.max(1, Math.min(10, Number($("conc").value) || 3));
-    localStorage.setItem("epcfix-key", state.apiKey);
-    localStorage.setItem("epcfix-conc", String(state.concurrency));
-    renderKeyStatus();
-  });
+  $("save-key").addEventListener("click", syncKeyFromInput);
 
   $("clear-key").addEventListener("click", () => {
     state.apiKey = "";

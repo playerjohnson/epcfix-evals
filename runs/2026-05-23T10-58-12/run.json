@@ -1,0 +1,1127 @@
+{
+  "stamp": "2026-05-23T10-58-12",
+  "lastRunAt": "2026-05-23T10:58:12.827Z",
+  "args": {
+    "mode": "from-raw",
+    "fromRaw": "/tmp/raw-responses.json",
+    "concurrency": 4,
+    "model": "gemini-2.5-flash",
+    "commit": "local-mcp-flash-thinking"
+  },
+  "results": [
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "worried-small",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 5,
+        "credibility": 7,
+        "emotionalFit": 2,
+        "actionClarity": 6,
+        "reasoning": "The copy is poorly matched to Sarah's emotional state, focusing on 'payback investment' rather than her fears of costs and need for a simple plan, and the 'portfolio' mention is irrelevant. Its strength lies only in the explicit mention of MEES, a known concern."
+      },
+      "weightedScore": 52
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "portfolio-investor",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 8,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The copy directly addresses Raj's investment mindset and need for data-driven decisions across his portfolio, making 'payback period' highly appealing. The promise of '30 seconds' might slightly temper credibility for a complex calculation, but overall it's a strong fit."
+      },
+      "weightedScore": 87
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "accidental",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 5,
+        "credibility": 7,
+        "emotionalFit": 2,
+        "actionClarity": 6,
+        "reasoning": "The copy fails to connect with Emma's disinterest in being a landlord and her desire for minimal effort or an exit strategy, focusing instead on financial 'investment' and 'payback'. Its only minor strength is the promise of quick calculation, which could alleviate some admin fear if the output were relevant."
+      },
+      "weightedScore": 52
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "diy-cost-conscious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 6,
+        "clarity": 8,
+        "credibility": 8,
+        "emotionalFit": 5,
+        "actionClarity": 7,
+        "reasoning": "The copy's focus on cost recovery ('pays for itself') has some appeal for Mark's cost-conscious nature and the 30-second promise is efficient. However, the 'investment' framing could trigger his inherent suspicion of being upsold or incurring hidden costs, which is his biggest fear."
+      },
+      "weightedScore": 70
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "letting-agent",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The copy perfectly aligns with James's need for an efficient, data-driven solution to position himself as a MEES expert and provide valuable insights to his landlord clients across their portfolios. Its strength is in offering a powerful tool for client retention and proactive service delivery."
+      },
+      "weightedScore": 88
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "hmo-operator",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 6,
+        "clarity": 8,
+        "credibility": 8,
+        "emotionalFit": 5,
+        "actionClarity": 7,
+        "reasoning": "The copy offers a relevant concept (payback for investment) for protecting yields, which has some appeal to Priya's business acumen and the 30-second promise is efficient. However, it entirely misses her critical, specialist needs regarding HMO licensing, sequencing retrofits, and the specific interaction of MEES with HMOs."
+      },
+      "weightedScore": 70
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "old-school",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 6,
+        "credibility": 7,
+        "emotionalFit": 2,
+        "actionClarity": 6,
+        "reasoning": "The copy directly clashes with Geoff's anti-spending, anti-government stance by framing compliance as a 'retrofit investment' with a 'payback period,' which he'd likely see as marketing fluff or a trick to spend more. Its only minor strength is the speed promise, which might appeal if the output was simply about minimal compliance."
+      },
+      "weightedScore": 53
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "green-curious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.4,
+        "noPaybackTrap": false,
+        "passes": 4,
+        "notes": [
+          "Payback/ROI framing detected (flagged as poor fit for most personas)."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 8,
+        "emotionalFit": 8,
+        "actionClarity": 9,
+        "reasoning": "The copy resonates strongly with Hannah's analytical, long-term asset-value approach to property, making 'payback period' a highly relevant and appealing metric for her retrofit and investment decisions. Its weakness is a lack of specific mention of grants or advanced tech, which are key concerns for her."
+      },
+      "weightedScore": 85
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "worried-small",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 8,
+        "reasoning": "Directly targets her fear of the deadline, fines, and high costs, offering the 'cheapest route' for her single EPC E property. The language is plain and clear, providing a reassuring path forward despite the 'portfolio' phrasing being a slight mismatch."
+      },
+      "weightedScore": 90
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "portfolio-investor",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 10,
+        "clarity": 9,
+        "credibility": 10,
+        "emotionalFit": 10,
+        "actionClarity": 9,
+        "reasoning": "The copy is ideally suited, directly addressing his portfolio-level concerns about future lettability, capex shock, and cost-efficiency. The emphasis on 'every one' and 'cheapest route' aligns perfectly with his numbers-led, strategic approach to compliance and asset management."
+      },
+      "weightedScore": 97
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "accidental",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 7,
+        "credibility": 8,
+        "emotionalFit": 2,
+        "actionClarity": 6,
+        "reasoning": "The 'portfolio' language and fear-led tone immediately alienate this persona who manages a single property and doesn't identify as a landlord. While MEES is generally relevant, the copy feels too aggressive and not tailored to her need for calm, minimal burden advice."
+      },
+      "weightedScore": 60
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "diy-cost-conscious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The blunt, fear-led headline effectively grabs his attention with an undeniable future problem for his D-E properties. The promise of the 'cheapest route to compliance' directly addresses his aversion to hidden costs and being upsold, aligning perfectly with his DIY and cost-conscious mindset."
+      },
+      "weightedScore": 92
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "letting-agent",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The copy strongly resonates with his professional need to manage MEES compliance across his large portfolio of managed properties. It addresses his fear of being unprepared and offers a clear path to efficient, cost-effective solutions for 'every one,' supporting his goal of proactive expert positioning."
+      },
+      "weightedScore": 92
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "hmo-operator",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 6,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 5,
+        "actionClarity": 9,
+        "reasoning": "While the headline establishes a relevant problem (MEES deadline, portfolio readiness), the subhead's promise of 'cheapest route to compliance' is too generic for this specialist persona. It fails to address her unique concerns regarding HMO licensing stacking, void periods, or strategic sequencing of retrofits around academic turnover."
+      },
+      "weightedScore": 80
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "old-school",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The copy's direct, matter-of-fact tone ('won't be lettable') is highly effective for Geoff, cutting through his cynicism about compliance. It directly addresses his situation (EPC E/F properties) and appeals to his goal of minimum legal compliance via the 'cheapest route,' without being patronising or 'greenwash.'"
+      },
+      "weightedScore": 92
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "green-curious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.4,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 4,
+        "clarity": 8,
+        "credibility": 9,
+        "emotionalFit": 3,
+        "actionClarity": 8,
+        "reasoning": "The copy focuses on basic EPC E compliance and the 'cheapest route,' which is too low-level for Hannah's ambitious goals of pushing properties to B or A. It fails to address her specific interests in optimal retrofit technologies, lifetime cost decisions, or grant opportunities, making the emotional fit weak despite clear language."
+      },
+      "weightedScore": 70
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "worried-small",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 8,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The copy directly addresses Sarah's fear of forced spending and rip-offs by promising a cost-ranked, grant-applied plan for compliance. The language is plain and the solution is clear, fitting her need for a straightforward, reassuring guide."
+      },
+      "weightedScore": 90
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "portfolio-investor",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 10,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "This copy is nearly perfect for Raj, hitting all his key goals around strategic, cost-efficient, and phased capex planning. The promise to rank by cost and apply grants provides the direct, numbers-led approach he desires for portfolio optimization."
+      },
+      "weightedScore": 93
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "accidental",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 4,
+        "clarity": 7,
+        "credibility": 7,
+        "emotionalFit": 4,
+        "actionClarity": 7,
+        "reasoning": "The copy focuses on managing retrofits efficiently, which still presents an admin burden for Emma. It doesn't offer the 'sell vs retrofit' option or the hand-holding reassurance she needs to minimize her involvement or make the problem disappear."
+      },
+      "weightedScore": 65
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "diy-cost-conscious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 8,
+        "actionClarity": 9,
+        "reasoning": "This copy strongly appeals to Mark's desire for independent, cost-effective planning, promising exactly the kind of ranked, grant-aware information he'd seek to uncover himself. It directly counters his fear of overpaying or being upsold by providing a clear, optimized plan."
+      },
+      "weightedScore": 90
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "letting-agent",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 6,
+        "clarity": 8,
+        "credibility": 8,
+        "emotionalFit": 5,
+        "actionClarity": 6,
+        "reasoning": "While the tool's function (cost-ranked retrofits) is relevant to his clients' needs, the copy doesn't address his B2B operational goals like bulk workflow, whitelabel reports, or expert positioning. The CTA is also landlord-centric, not agent-centric."
+      },
+      "weightedScore": 72
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "hmo-operator",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 7,
+        "clarity": 8,
+        "credibility": 8,
+        "emotionalFit": 6,
+        "actionClarity": 8,
+        "reasoning": "The copy provides a strong general solution for EPC compliance and cost efficiency but lacks the specific language or features relevant to HMO operators, such as sequencing around void periods or addressing complex HMO+MEES interactions."
+      },
+      "weightedScore": 78
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "old-school",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 4,
+        "clarity": 8,
+        "credibility": 7,
+        "emotionalFit": 3,
+        "actionClarity": 6,
+        "reasoning": "Geoff is resistant to spending and being dictated by technology, and the copy explicitly promotes getting upgrades and receiving a plan. It fails to address his primary goals of finding minimum compliance or exemptions, which he prioritizes over investment."
+      },
+      "weightedScore": 63
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "green-curious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 9.8,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 8,
+        "actionClarity": 9,
+        "reasoning": "The copy's focus on cost-ranked, grant-applied retrofits directly addresses Hannah's fears of incorrect tech and missed grants. While it only states 'EPC C', the systematic approach and grant focus align perfectly with her goal of pushing to higher grades efficiently and intelligently."
+      },
+      "weightedScore": 90
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "worried-small",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 4,
+        "clarity": 3,
+        "credibility": 5,
+        "emotionalFit": 2,
+        "actionClarity": 5,
+        "reasoning": "The headline identifies the core problem (MEES 2030), which is relevant. However, the subhead is filled with high-level jargon like 'capex sequencing' and 'workspace' that Sarah, with her low jargon tolerance and need for plain English, would find confusing and intimidating. The tone is formal, not reassuring, failing to address her fears directly."
+      },
+      "weightedScore": 45
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "portfolio-investor",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 8,
+        "actionClarity": 8,
+        "reasoning": "This copy is a near-perfect fit. The headline establishes authority and relevance. The subhead uses high-jargon terms like 'capex sequencing' and 'property-by-property assessment' which directly map to Raj's goals of phased capex and cost per property. The tone is direct and professional, aligning with his numbers-led approach."
+      },
+      "weightedScore": 85
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "accidental",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 2,
+        "credibility": 4,
+        "emotionalFit": 1,
+        "actionClarity": 4,
+        "reasoning": "This copy is a very poor fit. The language ('compliance platform,' 'capex sequencing') is far too technical and jargon-heavy for someone who doesn't identify as a landlord and fears admin. It offers no calm, hand-holding, or reassurance, instead presenting a complex, B2B-style solution that would likely increase her anxiety about getting things wrong."
+      },
+      "weightedScore": 37
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "diy-cost-conscious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 7,
+        "clarity": 6,
+        "credibility": 7,
+        "emotionalFit": 6,
+        "actionClarity": 9,
+        "reasoning": "The headline and subhead offer relevant features like 'property-by-property assessment' and 'grant-eligible retrofit planning' for his planning goals. While 'capex sequencing' pushes his medium jargon tolerance, the 'Start free assessment' CTA directly addresses his primary fear of paying for tools and seeking free planning, making it a strong draw."
+      },
+      "weightedScore": 72
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "letting-agent",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 8,
+        "reasoning": "This copy aligns exceptionally well. The B2B language ('compliance platform', 'workspace') and features like 'property-by-property assessment' and 'capex sequencing' speak directly to his needs for bulk workflow and expert positioning. The professional, jargon-rich tone perfectly matches his pro B2B preference, suggesting a robust solution for his branch."
+      },
+      "weightedScore": 87
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "hmo-operator",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 6,
+        "clarity": 8,
+        "credibility": 8,
+        "emotionalFit": 6,
+        "actionClarity": 7,
+        "reasoning": "The headline and subhead speak to MEES compliance and sophisticated planning ('capex sequencing'), which aligns with her high jargon tolerance and need to protect yields. However, the copy completely misses any mention of HMOs or their interaction with MEES, which is her primary fear and specialist interest, thereby reducing its direct relevance."
+      },
+      "weightedScore": 72
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "old-school",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 4,
+        "credibility": 3,
+        "emotionalFit": 2,
+        "actionClarity": 4,
+        "reasoning": "This copy misses the mark for Geoff. The terms 'compliance platform' and 'capex sequencing' are too jargon-heavy and imply a level of engagement and complexity he'd reject as overreach or 'being told by an app.' The tone is too formal and doesn't align with his desire for simple, matter-of-fact information on minimum legal requirements and exemptions."
+      },
+      "weightedScore": 40
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "green-curious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 14.3,
+        "noPaybackTrap": true,
+        "passes": 4,
+        "notes": [
+          "Reading grade 14.3 — too high for general audience."
+        ]
+      },
+      "judge": {
+        "personaRelevance": 8,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 8,
+        "actionClarity": 8,
+        "reasoning": "The copy speaks directly to Hannah's goals with its focus on 'grant-eligible retrofit planning' and 'capex sequencing,' which she would understand and appreciate for lifetime cost analysis and grant discovery. The substantive, technical tone and 'compliance platform' positioning align perfectly with her high jargon tolerance and desire for detailed, structured solutions to push her properties to higher EPCs."
+      },
+      "weightedScore": 83
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "worried-small",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 8,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The copy directly addresses Sarah's fears of not understanding MEES, avoiding ripoffs, and needing a plain-English plan. 'Under 5 minutes' and 'cheapest way' are very reassuring, and the free check reduces her fear of being upsold or ripped off. The language is accessible and offers concrete value without jargon."
+      },
+      "weightedScore": 90
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "portfolio-investor",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 8,
+        "clarity": 9,
+        "credibility": 8,
+        "emotionalFit": 7,
+        "actionClarity": 9,
+        "reasoning": "The 'address by address' detail, 'gap to compliance', and 'cheapest way' provide valuable, actionable data for portfolio management and cost control. While it doesn't explicitly mention 'rank-order' or 'phased capex', the information provided is foundational for those goals. The promise of speed and a free check appeals to efficiency and low-risk testing."
+      },
+      "weightedScore": 85
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "accidental",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 9,
+        "clarity": 9,
+        "credibility": 9,
+        "emotionalFit": 9,
+        "actionClarity": 9,
+        "reasoning": "The promise of quick results ('under 5 minutes') directly tackles her admin burden fear. 'Cheapest way to close it' resonates strongly with someone reluctant to spend, and the 'free' check offers trustworthy, low-commitment advice. It provides the minimum viable compliance information she seeks without being overwhelming."
+      },
+      "weightedScore": 92
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "diy-cost-conscious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 10,
+        "clarity": 9,
+        "credibility": 10,
+        "emotionalFit": 10,
+        "actionClarity": 10,
+        "reasoning": "This copy is perfectly tailored to Mark's needs. 'Cheapest way to close it' and especially 'Check the first one free' directly address his fears of paying for Google-able info, being upsold, and hidden costs. The no-fluff, direct benefits make it highly appealing and credible for his DIY, cost-conscious mindset."
+      },
+      "weightedScore": 98
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "letting-agent",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 4,
+        "clarity": 8,
+        "credibility": 6,
+        "emotionalFit": 4,
+        "actionClarity": 8,
+        "reasoning": "While MEES compliance is critical, this copy is too focused on individual properties and cost-saving for a branch manager's B2B needs. 'Under 5 minutes' for one property doesn't address 'bulk workflow' or 'drowning in assessments' for 80 doors. It lacks any mention of whitelabel reports or proactive client positioning, making it a poor emotional fit for his professional goals."
+      },
+      "weightedScore": 67
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "hmo-operator",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 5,
+        "clarity": 8,
+        "credibility": 6,
+        "emotionalFit": 4,
+        "actionClarity": 8,
+        "reasoning": "The copy provides generic MEES compliance info, which is relevant to Priya. However, it entirely misses her specialized concerns like 'MEES+HMO stacking', 'void periods', or 'sequencing around Jun-Aug'. Its generic approach and lack of specialist language make it an inadequate emotional fit, as it doesn't address her unique challenges and advanced planning needs."
+      },
+      "weightedScore": 68
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "old-school",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 6,
+        "clarity": 9,
+        "credibility": 7,
+        "emotionalFit": 5,
+        "actionClarity": 9,
+        "reasoning": "The promise of the 'cheapest way' resonates with Geoff's aversion to spending on tenants and finding the 'min legal'. The copy is matter-of-fact and not patronising. However, the product name 'EPCFix' and the 'app' implications might trigger his distrust of being 'told by an app' and modern tech."
+      },
+      "weightedScore": 77
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "green-curious",
+      "programmatic": {
+        "wordCountOk": true,
+        "hasConcreteOutcome": true,
+        "jargonCount": 0,
+        "readingGrade": 6.1,
+        "noPaybackTrap": true,
+        "passes": 5,
+        "notes": []
+      },
+      "judge": {
+        "personaRelevance": 3,
+        "clarity": 8,
+        "credibility": 5,
+        "emotionalFit": 3,
+        "actionClarity": 8,
+        "reasoning": "This copy focuses on 'passing MEES' and the 'cheapest way', which is far below Hannah's goals of pushing to B/A, finding grants, and considering lifetime cost. It completely misses her interest in retrofit tech and substantive, technical guidance. The emphasis on 'cheapest' is likely a negative trigger, as she prioritises long-term value and effectiveness over minimal compliance."
+      },
+      "weightedScore": 62
+    }
+  ],
+  "raw": [
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "worried-small",
+      "response": "{\"persona_relevance\":3,\"clarity\":5,\"credibility\":7,\"emotional_fit\":2,\"action_clarity\":6,\"reasoning\":\"The copy is poorly matched to Sarah's emotional state, focusing on 'payback investment' rather than her fears of costs and need for a simple plan, and the 'portfolio' mention is irrelevant. Its strength lies only in the explicit mention of MEES, a known concern.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "portfolio-investor",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":8,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The copy directly addresses Raj's investment mindset and need for data-driven decisions across his portfolio, making 'payback period' highly appealing. The promise of '30 seconds' might slightly temper credibility for a complex calculation, but overall it's a strong fit.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "accidental",
+      "response": "{\"persona_relevance\":3,\"clarity\":5,\"credibility\":7,\"emotional_fit\":2,\"action_clarity\":6,\"reasoning\":\"The copy fails to connect with Emma's disinterest in being a landlord and her desire for minimal effort or an exit strategy, focusing instead on financial 'investment' and 'payback'. Its only minor strength is the promise of quick calculation, which could alleviate some admin fear if the output were relevant.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "diy-cost-conscious",
+      "response": "{\"persona_relevance\":6,\"clarity\":8,\"credibility\":8,\"emotional_fit\":5,\"action_clarity\":7,\"reasoning\":\"The copy's focus on cost recovery ('pays for itself') has some appeal for Mark's cost-conscious nature and the 30-second promise is efficient. However, the 'investment' framing could trigger his inherent suspicion of being upsold or incurring hidden costs, which is his biggest fear.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "letting-agent",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The copy perfectly aligns with James's need for an efficient, data-driven solution to position himself as a MEES expert and provide valuable insights to his landlord clients across their portfolios. Its strength is in offering a powerful tool for client retention and proactive service delivery.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "hmo-operator",
+      "response": "{\"persona_relevance\":6,\"clarity\":8,\"credibility\":8,\"emotional_fit\":5,\"action_clarity\":7,\"reasoning\":\"The copy offers a relevant concept (payback for investment) for protecting yields, which has some appeal to Priya's business acumen and the 30-second promise is efficient. However, it entirely misses her critical, specialist needs regarding HMO licensing, sequencing retrofits, and the specific interaction of MEES with HMOs.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "old-school",
+      "response": "{\"persona_relevance\":3,\"clarity\":6,\"credibility\":7,\"emotional_fit\":2,\"action_clarity\":6,\"reasoning\":\"The copy directly clashes with Geoff's anti-spending, anti-government stance by framing compliance as a 'retrofit investment' with a 'payback period,' which he'd likely see as marketing fluff or a trick to spend more. Its only minor strength is the speed promise, which might appeal if the output was simply about minimal compliance.\"}"
+    },
+    {
+      "variantId": "v1-payback-baseline",
+      "personaId": "green-curious",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":8,\"emotional_fit\":8,\"action_clarity\":9,\"reasoning\":\"The copy resonates strongly with Hannah's analytical, long-term asset-value approach to property, making 'payback period' a highly relevant and appealing metric for her retrofit and investment decisions. Its weakness is a lack of specific mention of grants or advanced tech, which are key concerns for her.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "worried-small",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":8,\"reasoning\":\"Directly targets her fear of the deadline, fines, and high costs, offering the 'cheapest route' for her single EPC E property. The language is plain and clear, providing a reassuring path forward despite the 'portfolio' phrasing being a slight mismatch.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "portfolio-investor",
+      "response": "{\"persona_relevance\":10,\"clarity\":9,\"credibility\":10,\"emotional_fit\":10,\"action_clarity\":9,\"reasoning\":\"The copy is ideally suited, directly addressing his portfolio-level concerns about future lettability, capex shock, and cost-efficiency. The emphasis on 'every one' and 'cheapest route' aligns perfectly with his numbers-led, strategic approach to compliance and asset management.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "accidental",
+      "response": "{\"persona_relevance\":3,\"clarity\":7,\"credibility\":8,\"emotional_fit\":2,\"action_clarity\":6,\"reasoning\":\"The 'portfolio' language and fear-led tone immediately alienate this persona who manages a single property and doesn't identify as a landlord. While MEES is generally relevant, the copy feels too aggressive and not tailored to her need for calm, minimal burden advice.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "diy-cost-conscious",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The blunt, fear-led headline effectively grabs his attention with an undeniable future problem for his D-E properties. The promise of the 'cheapest route to compliance' directly addresses his aversion to hidden costs and being upsold, aligning perfectly with his DIY and cost-conscious mindset.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "letting-agent",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The copy strongly resonates with his professional need to manage MEES compliance across his large portfolio of managed properties. It addresses his fear of being unprepared and offers a clear path to efficient, cost-effective solutions for 'every one,' supporting his goal of proactive expert positioning.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "hmo-operator",
+      "response": "{\"persona_relevance\":6,\"clarity\":9,\"credibility\":9,\"emotional_fit\":5,\"action_clarity\":9,\"reasoning\":\"While the headline establishes a relevant problem (MEES deadline, portfolio readiness), the subhead's promise of 'cheapest route to compliance' is too generic for this specialist persona. It fails to address her unique concerns regarding HMO licensing stacking, void periods, or strategic sequencing of retrofits around academic turnover.\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "old-school",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The copy's direct, matter-of-fact tone ('won't be lettable') is highly effective for Geoff, cutting through his cynicism about compliance. It directly addresses his situation (EPC E/F properties) and appeals to his goal of minimum legal compliance via the 'cheapest route,' without being patronising or 'greenwash.'\"}"
+    },
+    {
+      "variantId": "v2-fear-deadline",
+      "personaId": "green-curious",
+      "response": "{\"persona_relevance\":4,\"clarity\":8,\"credibility\":9,\"emotional_fit\":3,\"action_clarity\":8,\"reasoning\":\"The copy focuses on basic EPC E compliance and the 'cheapest route,' which is too low-level for Hannah's ambitious goals of pushing properties to B or A. It fails to address her specific interests in optimal retrofit technologies, lifetime cost decisions, or grant opportunities, making the emotional fit weak despite clear language.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "worried-small",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":8,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The copy directly addresses Sarah's fear of forced spending and rip-offs by promising a cost-ranked, grant-applied plan for compliance. The language is plain and the solution is clear, fitting her need for a straightforward, reassuring guide.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "portfolio-investor",
+      "response": "{\"persona_relevance\":10,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"This copy is nearly perfect for Raj, hitting all his key goals around strategic, cost-efficient, and phased capex planning. The promise to rank by cost and apply grants provides the direct, numbers-led approach he desires for portfolio optimization.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "accidental",
+      "response": "{\"persona_relevance\":4,\"clarity\":7,\"credibility\":7,\"emotional_fit\":4,\"action_clarity\":7,\"reasoning\":\"The copy focuses on managing retrofits efficiently, which still presents an admin burden for Emma. It doesn't offer the 'sell vs retrofit' option or the hand-holding reassurance she needs to minimize her involvement or make the problem disappear.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "diy-cost-conscious",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":8,\"action_clarity\":9,\"reasoning\":\"This copy strongly appeals to Mark's desire for independent, cost-effective planning, promising exactly the kind of ranked, grant-aware information he'd seek to uncover himself. It directly counters his fear of overpaying or being upsold by providing a clear, optimized plan.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "letting-agent",
+      "response": "{\"persona_relevance\":6,\"clarity\":8,\"credibility\":8,\"emotional_fit\":5,\"action_clarity\":6,\"reasoning\":\"While the tool's function (cost-ranked retrofits) is relevant to his clients' needs, the copy doesn't address his B2B operational goals like bulk workflow, whitelabel reports, or expert positioning. The CTA is also landlord-centric, not agent-centric.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "hmo-operator",
+      "response": "{\"persona_relevance\":7,\"clarity\":8,\"credibility\":8,\"emotional_fit\":6,\"action_clarity\":8,\"reasoning\":\"The copy provides a strong general solution for EPC compliance and cost efficiency but lacks the specific language or features relevant to HMO operators, such as sequencing around void periods or addressing complex HMO+MEES interactions.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "old-school",
+      "response": "{\"persona_relevance\":4,\"clarity\":8,\"credibility\":7,\"emotional_fit\":3,\"action_clarity\":6,\"reasoning\":\"Geoff is resistant to spending and being dictated by technology, and the copy explicitly promotes getting upgrades and receiving a plan. It fails to address his primary goals of finding minimum compliance or exemptions, which he prioritizes over investment.\"}"
+    },
+    {
+      "variantId": "v3-solution-ranked",
+      "personaId": "green-curious",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":8,\"action_clarity\":9,\"reasoning\":\"The copy's focus on cost-ranked, grant-applied retrofits directly addresses Hannah's fears of incorrect tech and missed grants. While it only states 'EPC C', the systematic approach and grant focus align perfectly with her goal of pushing to higher grades efficiently and intelligently.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "worried-small",
+      "response": "{\"persona_relevance\":4,\"clarity\":3,\"credibility\":5,\"emotional_fit\":2,\"action_clarity\":5,\"reasoning\":\"The headline identifies the core problem (MEES 2030), which is relevant. However, the subhead is filled with high-level jargon like 'capex sequencing' and 'workspace' that Sarah, with her low jargon tolerance and need for plain English, would find confusing and intimidating. The tone is formal, not reassuring, failing to address her fears directly.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "portfolio-investor",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":8,\"action_clarity\":8,\"reasoning\":\"This copy is a near-perfect fit. The headline establishes authority and relevance. The subhead uses high-jargon terms like 'capex sequencing' and 'property-by-property assessment' which directly map to Raj's goals of phased capex and cost per property. The tone is direct and professional, aligning with his numbers-led approach.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "accidental",
+      "response": "{\"persona_relevance\":3,\"clarity\":2,\"credibility\":4,\"emotional_fit\":1,\"action_clarity\":4,\"reasoning\":\"This copy is a very poor fit. The language ('compliance platform,' 'capex sequencing') is far too technical and jargon-heavy for someone who doesn't identify as a landlord and fears admin. It offers no calm, hand-holding, or reassurance, instead presenting a complex, B2B-style solution that would likely increase her anxiety about getting things wrong.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "diy-cost-conscious",
+      "response": "{\"persona_relevance\":7,\"clarity\":6,\"credibility\":7,\"emotional_fit\":6,\"action_clarity\":9,\"reasoning\":\"The headline and subhead offer relevant features like 'property-by-property assessment' and 'grant-eligible retrofit planning' for his planning goals. While 'capex sequencing' pushes his medium jargon tolerance, the 'Start free assessment' CTA directly addresses his primary fear of paying for tools and seeking free planning, making it a strong draw.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "letting-agent",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":8,\"reasoning\":\"This copy aligns exceptionally well. The B2B language ('compliance platform', 'workspace') and features like 'property-by-property assessment' and 'capex sequencing' speak directly to his needs for bulk workflow and expert positioning. The professional, jargon-rich tone perfectly matches his pro B2B preference, suggesting a robust solution for his branch.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "hmo-operator",
+      "response": "{\"persona_relevance\":6,\"clarity\":8,\"credibility\":8,\"emotional_fit\":6,\"action_clarity\":7,\"reasoning\":\"The headline and subhead speak to MEES compliance and sophisticated planning ('capex sequencing'), which aligns with her high jargon tolerance and need to protect yields. However, the copy completely misses any mention of HMOs or their interaction with MEES, which is her primary fear and specialist interest, thereby reducing its direct relevance.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "old-school",
+      "response": "{\"persona_relevance\":3,\"clarity\":4,\"credibility\":3,\"emotional_fit\":2,\"action_clarity\":4,\"reasoning\":\"This copy misses the mark for Geoff. The terms 'compliance platform' and 'capex sequencing' are too jargon-heavy and imply a level of engagement and complexity he'd reject as overreach or 'being told by an app.' The tone is too formal and doesn't align with his desire for simple, matter-of-fact information on minimum legal requirements and exemptions.\"}"
+    },
+    {
+      "variantId": "v4-authority-platform",
+      "personaId": "green-curious",
+      "response": "{\"persona_relevance\":8,\"clarity\":9,\"credibility\":9,\"emotional_fit\":8,\"action_clarity\":8,\"reasoning\":\"The copy speaks directly to Hannah's goals with its focus on 'grant-eligible retrofit planning' and 'capex sequencing,' which she would understand and appreciate for lifetime cost analysis and grant discovery. The substantive, technical tone and 'compliance platform' positioning align perfectly with her high jargon tolerance and desire for detailed, structured solutions to push her properties to higher EPCs.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "worried-small",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":8,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The copy directly addresses Sarah's fears of not understanding MEES, avoiding ripoffs, and needing a plain-English plan. 'Under 5 minutes' and 'cheapest way' are very reassuring, and the free check reduces her fear of being upsold or ripped off. The language is accessible and offers concrete value without jargon.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "portfolio-investor",
+      "response": "{\"persona_relevance\":8,\"clarity\":9,\"credibility\":8,\"emotional_fit\":7,\"action_clarity\":9,\"reasoning\":\"The 'address by address' detail, 'gap to compliance', and 'cheapest way' provide valuable, actionable data for portfolio management and cost control. While it doesn't explicitly mention 'rank-order' or 'phased capex', the information provided is foundational for those goals. The promise of speed and a free check appeals to efficiency and low-risk testing.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "accidental",
+      "response": "{\"persona_relevance\":9,\"clarity\":9,\"credibility\":9,\"emotional_fit\":9,\"action_clarity\":9,\"reasoning\":\"The promise of quick results ('under 5 minutes') directly tackles her admin burden fear. 'Cheapest way to close it' resonates strongly with someone reluctant to spend, and the 'free' check offers trustworthy, low-commitment advice. It provides the minimum viable compliance information she seeks without being overwhelming.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "diy-cost-conscious",
+      "response": "{\"persona_relevance\":10,\"clarity\":9,\"credibility\":10,\"emotional_fit\":10,\"action_clarity\":10,\"reasoning\":\"This copy is perfectly tailored to Mark's needs. 'Cheapest way to close it' and especially 'Check the first one free' directly address his fears of paying for Google-able info, being upsold, and hidden costs. The no-fluff, direct benefits make it highly appealing and credible for his DIY, cost-conscious mindset.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "letting-agent",
+      "response": "{\"persona_relevance\":4,\"clarity\":8,\"credibility\":6,\"emotional_fit\":4,\"action_clarity\":8,\"reasoning\":\"While MEES compliance is critical, this copy is too focused on individual properties and cost-saving for a branch manager's B2B needs. 'Under 5 minutes' for one property doesn't address 'bulk workflow' or 'drowning in assessments' for 80 doors. It lacks any mention of whitelabel reports or proactive client positioning, making it a poor emotional fit for his professional goals.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "hmo-operator",
+      "response": "{\"persona_relevance\":5,\"clarity\":8,\"credibility\":6,\"emotional_fit\":4,\"action_clarity\":8,\"reasoning\":\"The copy provides generic MEES compliance info, which is relevant to Priya. However, it entirely misses her specialized concerns like 'MEES+HMO stacking', 'void periods', or 'sequencing around Jun-Aug'. Its generic approach and lack of specialist language make it an inadequate emotional fit, as it doesn't address her unique challenges and advanced planning needs.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "old-school",
+      "response": "{\"persona_relevance\":6,\"clarity\":9,\"credibility\":7,\"emotional_fit\":5,\"action_clarity\":9,\"reasoning\":\"The promise of the 'cheapest way' resonates with Geoff's aversion to spending on tenants and finding the 'min legal'. The copy is matter-of-fact and not patronising. However, the product name 'EPCFix' and the 'app' implications might trigger his distrust of being 'told by an app' and modern tech.\"}"
+    },
+    {
+      "variantId": "v5-specific-outcome",
+      "personaId": "green-curious",
+      "response": "{\"persona_relevance\":3,\"clarity\":8,\"credibility\":5,\"emotional_fit\":3,\"action_clarity\":8,\"reasoning\":\"This copy focuses on 'passing MEES' and the 'cheapest way', which is far below Hannah's goals of pushing to B/A, finding grants, and considering lifetime cost. It completely misses her interest in retrofit tech and substantive, technical guidance. The emphasis on 'cheapest' is likely a negative trigger, as she prioritises long-term value and effectiveness over minimal compliance.\"}"
+    }
+  ]
+}

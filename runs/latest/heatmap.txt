@@ -1,0 +1,9 @@
+persona                v1   v2   v3   v4   v5
+worried-small          52   90   90   45   90
+portfolio-investor     87   97   93   85   85
+accidental             52   60   65   37   92
+diy-cost-conscious     70   92   90   72   98
+letting-agent          88   92   72   87   67
+hmo-operator           70   80   78   72   68
+old-school             53   92   63   40   77
+green-curious          85   70   90   83   62

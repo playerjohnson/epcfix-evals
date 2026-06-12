@@ -268,9 +268,26 @@
       </div>
     </div>
 
+    <!-- Latest committed scorecard (populated by the auto-sweep GitHub Action) -->
+    <div class="section-head">
+      <span class="num">05</span><h2>Latest committed scorecard</h2>
+      <span class="hint">auto-generated on every push to <code style="font-family:'IBM Plex Mono'">variants.js</code>. iterate in the repo, see the new heatmap here.</span>
+    </div>
+    <div class="card">
+      <object data="./runs/latest/heatmap.svg" type="image/svg+xml" style="width:100%;max-width:780px;display:block;margin:0 auto"
+        aria-label="Latest committed persona × variant heatmap">
+        <a href="./runs/latest/heatmap.svg">View latest heatmap (SVG)</a>
+      </object>
+      <div style="margin-top:14px;text-align:center;font-size:13px">
+        <a href="./runs/latest/report.md">Full markdown report</a>
+        &nbsp;·&nbsp;
+        <a href="./runs/latest/run.json">Raw run.json</a>
+      </div>
+    </div>
+
     <!-- Per-variant detail -->
     <div class="section-head">
-      <span class="num">05</span><h2>Per-variant detail</h2>
+      <span class="num">06</span><h2>Per-variant detail</h2>
       <span class="hint">where each variant actually wins or dies, persona by persona.</span>
     </div>
     <div id="details"></div>
